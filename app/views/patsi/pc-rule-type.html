@@ -1,0 +1,111 @@
+{{< layout }}
+
+{{$pageTitle}}
+	P.A.T.S.I
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+<div class="staff-container">
+
+	<section class="staff-nav">
+		<div class="staff-nav-links">
+			<ol>
+				<li><a href="search">Search</a></li>
+				<li><a href="rule-maker" class="selected">Rule Maker</a></li>
+			</ol>
+		</div>
+		
+		<div class="staff-meta">
+			<p>Date: 21 November 2015<br/>
+			   Time: 8:05am<br/>
+			   Agent: Gavin Elliott
+			</p>
+		</div>
+	</section>
+
+	<section class="staff-main" >				
+		<div style="width: 50%">
+			<h1 class="heading-xlarge" id="staffui">Add scheme number</h1>
+			
+			<label class="form-label text" for="search-terms">
+	        	<span class="form-hint">Type the PSR number or company/scheme name</span>
+			</label>
+			<input class="form-control search-box" type="text" id="search-terms" name="search-terms" 
+	      required data-parsley-error-message="Enter some search terms" value="10000009">
+	      	
+	    </div>
+	    <a href="end-search-results" style="margin-top: 10px;" class="button">Submit</a>
+	</section>
+	
+	
+	<!--
+		
+		<section class="staff-main" >				
+		<div style="width: 75%">
+		<h1 class="heading-xlarge">Rule Maker</h1>
+		
+		<form>
+			<fieldset class="inline">
+				<legend class="heading-medium">Which rule type do you need to create?</legend>
+			
+				<label class="block-label" for="radio-inline-1">
+				        <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+				        Merge
+					</label>
+			        <label class="block-label" for="radio-inline-2">
+				        <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+				        Remove
+			        </label>
+			        <label class="block-label" for="radio-inline-3">
+				        <input id="radio-inline-3" type="radio" name="radio-inline-group" value="No">
+				        Another
+			        </label>
+				</fieldset>
+  		</form>
+  		<br/>
+  		<form>
+	  		<fieldset>
+	  			<legend class="heading-medium">Details</legend>
+	  			<div class="form-group">
+	  				<label class="form-label" for="employer-name-1">Employer Name</label>
+	  				<input class="form-control" id="employer-name-1" name="employer-name-1" type="text">
+				</div>
+		
+				<div class="form-group">
+					<label class="form-label" for="employer-id-1">Employer ID</label>
+					<input class="form-control" id="employer-id-1" name="employer-id-1" type="text">
+				</div>
+				
+				<div class="form-group">
+	  				<label class="form-label" for="scheme-name-1">Scheme Name</label>
+	  				<input class="form-control" id="scheme-name-1" name="scheme-name-1" type="text">
+				</div>
+		
+				<div class="form-group">
+					<label class="form-label" for="scheme-id-1">Scheme ID</label>
+					<input class="form-control" id="scheme-id-1" name="scheme-id-1" type="text">
+				</div>
+	  		</fieldset>
+  		</form>
+  		
+  		<div class="form-group">
+	  		<label class="form-label-bold" for="textarea"> Add Scheme or Employer ID</label>
+  			<input class="form-control" id="scheme-id-2" name="scheme-id-2" type="text">
+  		</div>
+  		<br/>
+  		<div class="form-group">
+	  		<label class="form-label-bold" for="textarea">Notes</label>
+  			<textarea class="form-control" id="textarea" cols="30" rows="10"></textarea>
+  		</div>
+  		<div class="button">Submit</div>
+		</div>
+  	</section>
+  	-->
+</main>
+
+{{/content}}
+
+{{/ layout }}

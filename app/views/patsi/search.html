@@ -1,0 +1,97 @@
+{{< layout }}
+
+{{$pageTitle}}
+	P.A.T.S.I
+{{/pageTitle}}
+
+{{$content}}
+
+<main id="content" role="main">
+
+<div class="staff-container">
+
+	<section class="staff-nav">
+		<div class="staff-nav-links">
+			<ol>
+				<li><a href="search" class="selected">Search</a></li>
+				<li><a href="rule-maker">Rule Maker</a></li>
+			</ol>
+		</div>
+		
+		<div class="staff-meta">
+			<p>Date: 21 November 2015<br/>
+			   Time: 8:05am<br/>
+			   Agent: Gavin Elliott
+			</p>
+		</div>
+	</section>
+
+	<section aria-labelledby="staffui" class="staff-main">
+				
+		
+		<h1 class="form-title heading-large" id="staffui">Search for...</h1>
+	
+		<div class="form-group" id="keyword" style="width: 50%;">
+	    	<label class="form-label text" for="search-terms">
+	        <span class="form-hint">Type the PSR number</span>
+			</label>
+			<input class="form-control search-box" type="text" id="search-terms" name="search-terms" 
+	      required data-parsley-error-message="Enter some search terms" value="10000009">
+	      	<a href="finder-results-v5"><button class="button search-submit">Search</button></a>
+		  	
+		  	<table class="search-results">
+	        	<tbody>
+					<tr>
+						<thead>
+							<tr>
+								<th colspan="2" class="heading-medium">Stetfield Pension Scheme Notes</th>
+				      		</tr>
+				    	</thead>
+					</tr>
+					<tr>
+						<td>Nuffield Hospitals Pension And Life Assurance Scheme</td>
+				    </tr>
+					
+					<tr>
+						<td>2006-12-06 Auto Generated from bulk update</td>
+				    </tr>
+					
+					<tr>
+						<td>work request number 0091 - Wound Up Prior to April 2005 2005-02-03 ---WOUND UP SCHEME-- ---DATE LIQUIDATED-- N/A ---DATE WOUND UP---- 23/12/2004 ---NOTIFIED BY------ CHRIS JACKSON ---- COMPANY ---- HAMMONDS 7 DEVONSHIRE SQUARE CUTLERS GARDENS LONDON EC2M 4YH 0870 839 1427 ---- NEW SCHEME ---- NUFFIELD HOSPITAL PENSION &amp; LIFE ASS SCHEME C/O STUART BEST NUFFIELD HOSPITALS NUFFIELD HOUSE 1-4 THE CRESCENT KT6 4BN 10000006 ---ENQUIRIES TO----- ALBA LIFE ALBA LIFE 50 BOTHWELL STREET GLASGOW G2 6HR ---- NOTES ---- FILE TO PA NO LEVY DUE</td>
+				      </tr>
+				</tbody>
+			</table>
+			</div>
+		
+	</section>
+
+</main>
+
+{{/content}}
+
+{{/ layout }}
+
+<script type="text/javascript">
+	$(document).on('ready',function()
+	{
+	  $('.adviser').on('click',function(e)
+	  {
+	    e.preventDefault();
+	    $(this).siblings('.choice').show();
+	    $(this).hide();
+	  });
+
+	  $(".choice select").on('change',function(e)
+	  {
+	    e.preventDefault();
+
+	    var t = $(this).parent();
+	    console.log(t);
+
+	    $(this).parent().siblings('.adviser').find('a').text($(this).val());
+	    $(this).parent().siblings('.adviser').show();
+	    $(this).parent().hide();
+	  });
+
+	});
+</script>
